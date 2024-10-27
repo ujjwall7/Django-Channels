@@ -9,6 +9,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_channels.settings')
 
 ws_patterns = [
     path('ws/test/', TestConsumer.as_asgi())
+    path('ws/new/', TestConsumer.as_asgi())
 ]
 
 application = ProtocolTypeRouter({
