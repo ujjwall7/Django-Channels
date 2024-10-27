@@ -30,6 +30,7 @@ INSTALLED_APPS = [
 
     # Apps
     'master',
+    'notifications',
 ]
 
 MIDDLEWARE = [
