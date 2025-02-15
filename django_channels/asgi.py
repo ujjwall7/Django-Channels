@@ -8,11 +8,12 @@ from master.consumer import *
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_channels.settings')
 
 ws_patterns = [
-    path('ws/test/', TestConsumer.as_asgi())
-    path('ws/new/', TestConsumer.as_asgi())
+    path('ws/test/', TestConsumer.as_asgi()),
+    path('ws/new/', NewConsumer.as_asgi()),
 ]
 
 application = ProtocolTypeRouter({
     'http': get_asgi_application(),
     'websocket' : URLRouter(ws_patterns)
 })
+    
